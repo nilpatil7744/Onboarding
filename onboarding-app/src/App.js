@@ -3,7 +3,7 @@ import { Routes } from "./Routes/Routes";
 
 function App() {
   return (
-    <div className="App">
+    <div style={{ display: "flex", justifyContent: "center" }}>
       <Routes />
     </div>
   );
