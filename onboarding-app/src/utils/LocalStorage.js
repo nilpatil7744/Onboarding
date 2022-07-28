@@ -16,4 +16,4 @@ function loadData(key) {
   }
 }
 
-export { loadData };
+export { loadData, saveData };
