@@ -1,41 +1,38 @@
 import React, { useState } from "react";
 import Header from "./Header";
-import styled from "styled-components";
-import { Device, Strings } from "../../Constant";
+import { Strings } from "../../Constant";
 import InputArea from "../../Common/InputArea";
-import AppLogo from "../../Assets/AppLogo.png";
 import { Link } from "react-router-dom";
 import { loadData, saveData } from "../../utils/LocalStorage";
 import LogoUI from "../../Common/Logo";
-import ProgressBar from "../ProgressBar";
 import ProgressBarUi from "../ProgressBar";
 
-const Main = styled.div`
-  width: 60%;
-  height: 400;
-  margin-top: 5%;
-  margin-left: 20%;
-  background-color: white;
+// const Main = styled.div`
+//   width: 60%;
+//   height: 400;
+//   margin-top: 5%;
+//   margin-left: 20%;
+//   background-color: white;
 
-  @media ${Device.mobileS} {
-    background-color: white;
-  }
-  @media ${Device.mobileM} {
-    background-color: blue;
-  }
-  @media ${Device.mobileL} {
-    background-color: pink;
-  }
-  @media ${Device.laptop} {
-    background-color: purple;
-  }
-  @media ${Device.laptopL} {
-    background-color: white;
-  }
-  @media ${Device.desktop} {
-    background-color: red;
-  }
-`;
+//   @media ${Device.mobileS} {
+//     background-color: white;
+//   }
+//   @media ${Device.mobileM} {
+//     background-color: blue;
+//   }
+//   @media ${Device.mobileL} {
+//     background-color: pink;
+//   }
+//   @media ${Device.laptop} {
+//     background-color: purple;
+//   }
+//   @media ${Device.laptopL} {
+//     background-color: white;
+//   }
+//   @media ${Device.desktop} {
+//     background-color: red;
+//   }
+// `;
 
 const WelcomeScreen = (props) => {
   let valueName = loadData("name");

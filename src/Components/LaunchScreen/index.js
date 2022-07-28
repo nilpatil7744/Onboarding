@@ -1,10 +1,7 @@
-import React, { useState } from "react";
-import Header from "../WelcomeScreen/Header";
+import React from "react";
 import { Strings } from "../../Constant";
-import AppLogo from "../../Assets/AppLogo.png";
 import { Link } from "react-router-dom";
-import { loadData, saveData } from "../../utils/LocalStorage";
-import SelectSetup from "../SetupScreen/SelectSetup";
+import { loadData } from "../../utils/LocalStorage";
 import { AiFillCheckCircle } from "react-icons/ai";
 import LogoUI from "../../Common/Logo";
 import ProgressBarUi from "../ProgressBar";

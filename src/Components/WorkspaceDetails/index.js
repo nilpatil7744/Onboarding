@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import Header from "../WelcomeScreen/Header";
-import styled from "styled-components";
-import { Device, Strings } from "../../Constant";
+import { Strings } from "../../Constant";
 import InputArea from "../../Common/InputArea";
-import AppLogo from "../../Assets/AppLogo.png";
 import { Link } from "react-router-dom";
 import { loadData, saveData } from "../../utils/LocalStorage";
 import LogoUI from "../../Common/Logo";

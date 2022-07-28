@@ -49,7 +49,7 @@ const InputFixed = styled.input`
   }
 `;
 const InputArea = (props) => {
-  const { placeholder, header, url, text, value, onHandleChange } = props;
+  const { placeholder, url, text, value, onHandleChange } = props;
   return url === "url" ? (
     <div style={{ display: "flex" }}>
       <InputFixed type="text" placeholder={"www.eden.com/"} value={""} />

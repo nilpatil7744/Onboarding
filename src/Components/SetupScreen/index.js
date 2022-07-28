@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import Header from "../WelcomeScreen/Header";
-import styled from "styled-components";
-import { Device, Strings } from "../../Constant";
-import InputArea from "../../Common/InputArea";
-import AppLogo from "../../Assets/AppLogo.png";
+import { Strings } from "../../Constant";
 import { Link } from "react-router-dom";
 import { loadData, saveData } from "../../utils/LocalStorage";
 import SelectSetup from "./SelectSetup";
@@ -19,7 +16,7 @@ const SetupScreen = (props) => {
   };
 
   const handleAdd = () => {
-    if (selected == 1 || selected == 2) {
+    if (selected === 1 || selected === 2) {
       saveData("setup", selected);
     } else {
       alert("Please select a setup");
