@@ -38,12 +38,13 @@ const SetupScreen = (props) => {
       }}
     >
       <LogoUI />
-
       <ProgressBarUi phase={82} />
+      <br />
       <Header
         textHead={Strings.HOW_ARE_YOU}
         subText={Strings.WELL_STREAM_LINE}
       />
+
       <div
         style={{
           gap: "25px",
@@ -59,6 +60,7 @@ const SetupScreen = (props) => {
           handleSelected={handleSelected}
           id={1}
           selected={selected}
+          icon={"FaUserAlt"}
         />
 
         <SelectSetup
@@ -67,6 +69,7 @@ const SetupScreen = (props) => {
           subText={Strings.WIKIS_TEAMS}
           id={2}
           selected={selected}
+          icon={"BsFillPeopleFill"}
         />
       </div>
       {true ? (

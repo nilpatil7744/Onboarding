@@ -6,7 +6,7 @@ export const Strings = {
   CHANGE_WORKSPACE: "You can always change workspace later.",
   HOW_ARE_YOU: "How are you planning to use Eden?",
   WELL_STREAM_LINE: "We'll streamline you setup experience accordingly",
-  CONGRATULATIONS: "Congratulations, Eren!",
+  CONGRATULATIONS: "Congratulations",
   COMPLETED_ONBOARD:
     "You have completed onboarding, you can start using the Eden!",
   FOR_MYSELF: "For myself",

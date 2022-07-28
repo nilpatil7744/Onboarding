@@ -5,7 +5,9 @@ const Header = (props) => {
   return (
     <>
       <h1>{textHead}</h1>
-      <span style={{ marginLeft: "16%", color: "#9295A5" }}>{subText}</span>
+      <span style={{ marginLeft: "16%", color: "gray", fontWeight: 448 }}>
+        {subText}
+      </span>
     </>
   );
 };
