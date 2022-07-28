@@ -46,12 +46,12 @@ const WorkspaceDetails = (props) => {
       }}
     >
       <LogoUI />
-
-      <ProgressBarUi phase={50} />
+      <ProgressBarUi phase={50} /> <br />
       <Header
         textHead={Strings.LETS_SETUP}
         subText={Strings.CHANGE_WORKSPACE}
       />
+      <br />
       <h5 style={{ color: "#2F4F4F", padding: 7 }}>Workspace Name</h5>
       <InputArea
         placeholder="Eden"
@@ -61,16 +61,19 @@ const WorkspaceDetails = (props) => {
         value={query.workspaceName}
         onHandleChange={onHandleChange}
       />
-      <h5 style={{ color: "#2F4F4F", padding: 7 }}>Workspace URL</h5>
+      <h5 style={{ color: "#2F4F4F", padding: 7 }}>
+        Workspace URL{" "}
+        <span style={{ color: "gray", fontWeight: "lighter" }}>(optional)</span>
+      </h5>
       <InputArea
         placeholder="Steve"
         header={"Display Name"}
         setQuery={setQuery}
         text={"workspaceUrl"}
-        value={query.displayName}
+        value={query.workspaceUrl}
         onHandleChange={onHandleChange}
+        url={"url"}
       />
-
       {query.workspaceName ? (
         <Link style={{ outline: "none", textDecoration: "none" }} to="/setup">
           <div

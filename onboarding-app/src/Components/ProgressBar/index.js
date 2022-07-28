@@ -38,7 +38,6 @@ const ProgressBarUi = (props) => {
           filledBackground="linear-gradient(to right, #6A5EE5, #6A5EE5)"
         >
           {steps.map((step, index, arr) => {
-            console.log(step, index, arr, "kokokoko");
             return (
               <Step
                 // position={100 * (index / arr.length)}
@@ -50,8 +49,9 @@ const ProgressBarUi = (props) => {
                       alignItems: "center",
                       justifyContent: "center",
                       borderRadius: "50%",
-                      width: 50,
-                      height: 50,
+                      width: 40,
+                      height: 40,
+                      border: "1px solid gray",
                       color: accomplished ? "white" : "gray",
                       backgroundColor: accomplished ? "#6A5EE5" : "white",
                     }}

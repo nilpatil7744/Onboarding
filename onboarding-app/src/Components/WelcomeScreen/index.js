@@ -70,7 +70,6 @@ const WelcomeScreen = (props) => {
     <div
       style={{
         textAlign: "left",
-        // border: "1px solid red",
         display: "flex",
         width: "34rem",
         flexDirection: "column",
@@ -80,8 +79,14 @@ const WelcomeScreen = (props) => {
       <LogoUI />
 
       <ProgressBarUi phase={15} />
+
+      <br />
       <Header textHead={Strings.WELCOME} subText={Strings.YOU_CAN_CHANGE} />
-      <h5 style={{ color: "#2F4F4F", padding: 5 }}>Full Name</h5>
+      <br />
+
+      <h5 style={{ color: "#2F4F4F", padding: 5, paddingBottom: "10px" }}>
+        Full Name
+      </h5>
       <InputArea
         placeholder="Steve jobs"
         header={"Full Name"}
@@ -90,15 +95,20 @@ const WelcomeScreen = (props) => {
         value={query.name}
         onHandleChange={onHandleChange}
       />
-      <h5 style={{ color: "#2F4F4F", padding: 5 }}>Display Name</h5>
-      <InputArea
-        placeholder="Steve"
-        header={"Display Name"}
-        setQuery={setQuery}
-        text={"displayName"}
-        value={query.displayName}
-        onHandleChange={onHandleChange}
-      />
+
+      <div style={{ marginTop: "-6%" }}>
+        <h5 style={{ color: "#2F4F4F", padding: 5, paddingBottom: "10px" }}>
+          Display Name
+        </h5>
+        <InputArea
+          placeholder="Steve"
+          header={"Display Name"}
+          setQuery={setQuery}
+          text={"displayName"}
+          value={query.displayName}
+          onHandleChange={onHandleChange}
+        />
+      </div>
 
       {query.name && query.displayName ? (
         <Link
