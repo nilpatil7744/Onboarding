@@ -6,33 +6,7 @@ import { Link } from "react-router-dom";
 import { loadData, saveData } from "../../utils/LocalStorage";
 import LogoUI from "../../Common/Logo";
 import ProgressBarUi from "../ProgressBar";
-
-// const Main = styled.div`
-//   width: 60%;
-//   height: 400;
-//   margin-top: 5%;
-//   margin-left: 20%;
-//   background-color: white;
-
-//   @media ${Device.mobileS} {
-//     background-color: white;
-//   }
-//   @media ${Device.mobileM} {
-//     background-color: blue;
-//   }
-//   @media ${Device.mobileL} {
-//     background-color: pink;
-//   }
-//   @media ${Device.laptop} {
-//     background-color: purple;
-//   }
-//   @media ${Device.laptopL} {
-//     background-color: white;
-//   }
-//   @media ${Device.desktop} {
-//     background-color: red;
-//   }
-// `;
+import { Main, WorkspaceDiv } from "../../Styles";
 
 const WelcomeScreen = (props) => {
   let valueName = loadData("name");
@@ -41,7 +15,6 @@ const WelcomeScreen = (props) => {
     name: valueName ?? "",
     displayName: valueDisplayName ?? "",
   };
-
   const [query, setQuery] = useState(info);
 
   const onHandleChange = (e) => {
@@ -64,16 +37,10 @@ const WelcomeScreen = (props) => {
   };
 
   return (
-    <div
-      style={{
-        textAlign: "left",
-        display: "flex",
-        width: "34rem",
-        flexDirection: "column",
-        marginTop: "30px",
-      }}
-    >
-      <LogoUI />
+    <Main>
+      <div style={{ marginRight: "9%" }}>
+        <LogoUI />
+      </div>
 
       <ProgressBarUi phase={15} />
 
@@ -81,9 +48,16 @@ const WelcomeScreen = (props) => {
       <Header textHead={Strings.WELCOME} subText={Strings.YOU_CAN_CHANGE} />
       <br />
 
-      <h5 style={{ color: "#2F4F4F", padding: 5, paddingBottom: "10px" }}>
+      <h5
+        style={{
+          color: "#2F4F4F",
+          padding: 5,
+          paddingBottom: "10px",
+        }}
+      >
         Full Name
       </h5>
+
       <InputArea
         placeholder="Steve jobs"
         header={"Full Name"}
@@ -112,47 +86,18 @@ const WelcomeScreen = (props) => {
           style={{ outline: "none", textDecoration: "none" }}
           to="/workspace"
         >
-          <div
-            style={{
-              background: "#6A5EE5",
-              paddingLeft: "19px",
-              paddingTop: "12px",
-              paddingBottom: "12px",
-              width: "391px",
-              borderRadius: "5px",
-              color: "white",
-              textAlign: "center",
-              outline: "none",
-              textDecoration: "none",
-            }}
-            onClick={() => handleSubmit()}
-          >
-            Create Workspace
-          </div>
+          <WorkspaceDiv onClick={() => handleSubmit()}>
+            {Strings.CREATE_WORKSPACE}
+          </WorkspaceDiv>
         </Link>
       ) : (
         <>
-          {" "}
-          <div
-            style={{
-              background: "#6A5EE5",
-              paddingLeft: "19px",
-              paddingTop: "12px",
-              paddingBottom: "12px",
-              width: "391px",
-              borderRadius: "5px",
-              color: "white",
-              textAlign: "center",
-              outline: "none",
-              textDecoration: "none",
-            }}
-            onClick={() => handleSubmit()}
-          >
-            Create Workspace
-          </div>
+          <WorkspaceDiv onClick={() => handleSubmit()}>
+            {Strings.CREATE_WORKSPACE}
+          </WorkspaceDiv>
         </>
       )}
-    </div>
+    </Main>
   );
 };
 

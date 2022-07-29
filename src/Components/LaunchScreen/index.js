@@ -5,57 +5,38 @@ import { loadData } from "../../utils/LocalStorage";
 import { AiFillCheckCircle } from "react-icons/ai";
 import LogoUI from "../../Common/Logo";
 import ProgressBarUi from "../ProgressBar";
+import { LaunchDiv, Main } from "../../Styles";
 
 const LaunchScreen = (props) => {
   const userName = loadData("workspaceName");
   return (
-    <div
-      style={{
-        textAlign: "left",
-        // border: "1px solid red",
-        display: "flex",
-        width: "34rem",
-        flexDirection: "column",
-        marginTop: "30px",
-      }}
-    >
-      <LogoUI />
-      <ProgressBarUi phase={120} />
+    <Main>
+      <div style={{ marginLeft: "3%" }}>
+        <LogoUI />
+      </div>
+      <div style={{ marginLeft: "6%" }}>
+        <ProgressBarUi phase={120} />
+      </div>
       <br /> <br /> <br />
       <AiFillCheckCircle
-        size={59}
+        size={79}
         style={{
           color: "#6A5EE5",
           alignSelf: "center",
-          marginRight: "23%",
+          marginRight: "16%",
         }}
       />
       <br />
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <h1 style={{ marginLeft: "9%" }}>Congratulations, {userName}! </h1>
+        <h1 style={{ marginLeft: "13%" }}>Congratulations, {userName}! </h1>
         <span style={{}}>{Strings.COMPLETED_ONBOARD}</span>
       </div>
-      <Link style={{ outline: "none", textDecoration: "none" }}>
-        <div
-          style={{
-            background: "#6A5EE5",
-            paddingLeft: "19px",
-            paddingTop: "12px",
-            paddingBottom: "12px",
-            width: "391px",
-            borderRadius: "5px",
-            color: "white",
-            textAlign: "center",
-            outline: "none",
-            textDecoration: "none",
-            marginTop: "40px",
-          }}
-          onClick={() => {}}
-        >
-          Launch Eden
-        </div>
+      <Link
+        style={{ outline: "none", textDecoration: "none", marginLeft: "6%" }}
+      >
+        <LaunchDiv onClick={() => {}}>Launch Eden</LaunchDiv>
       </Link>
-    </div>
+    </Main>
   );
 };
 

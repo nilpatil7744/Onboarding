@@ -24,7 +24,7 @@ const InputTextCase = styled.input`
   padding-left: 19px;
   padding-top: 12px;
   padding-bottom: 12px;
-  width: 265px;
+  width: 256px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   &:focus {

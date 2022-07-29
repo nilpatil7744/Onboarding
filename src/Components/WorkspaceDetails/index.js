@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import { loadData, saveData } from "../../utils/LocalStorage";
 import LogoUI from "../../Common/Logo";
 import ProgressBarUi from "../ProgressBar";
+import { WorkspaceDiv, WorkspaceMain } from "../../Styles";
+
 const WorkspaceDetails = (props) => {
   let valueName = loadData("workspaceName");
   let valueDisplayName = loadData("workspaceUrl");
@@ -33,88 +35,60 @@ const WorkspaceDetails = (props) => {
     }
   };
   return (
-    <div
-      style={{
-        textAlign: "left",
-        // border: "1px solid red",
-        display: "flex",
-        width: "34rem",
-        flexDirection: "column",
-        marginTop: "30px",
-      }}
-    >
-      <LogoUI />
-      <ProgressBarUi phase={50} /> <br />
+    <WorkspaceMain>
+      <div style={{ marginLeft: "13%" }}>
+        <LogoUI />
+      </div>
+
+      <div style={{ marginLeft: "13%" }}>
+        <ProgressBarUi phase={50} />
+      </div>
+      <br />
       <Header
         textHead={Strings.LETS_SETUP}
         subText={Strings.CHANGE_WORKSPACE}
       />
       <br />
-      <h5 style={{ color: "#2F4F4F", padding: 7 }}>Workspace Name</h5>
-      <InputArea
-        placeholder="Eden"
-        header={"Full Name"}
-        setQuery={setQuery}
-        text={"workspaceName"}
-        value={query.workspaceName}
-        onHandleChange={onHandleChange}
-      />
-      <h5 style={{ color: "#2F4F4F", padding: 7 }}>
-        Workspace URL{" "}
-        <span style={{ color: "gray", fontWeight: "lighter" }}>(optional)</span>
-      </h5>
-      <InputArea
-        placeholder="Steve"
-        header={"Display Name"}
-        setQuery={setQuery}
-        text={"workspaceUrl"}
-        value={query.workspaceUrl}
-        onHandleChange={onHandleChange}
-        url={"url"}
-      />
-      {query.workspaceName ? (
-        <Link style={{ outline: "none", textDecoration: "none" }} to="/setup">
-          <div
-            style={{
-              background: "#6A5EE5",
-              paddingLeft: "19px",
-              paddingTop: "12px",
-              paddingBottom: "12px",
-              width: "391px",
-              borderRadius: "5px",
-              color: "white",
-              textAlign: "center",
-              outline: "none",
-              textDecoration: "none",
-            }}
-            onClick={() => handleSubmit()}
-          >
-            Create Workspace
-          </div>
-        </Link>
-      ) : (
-        <>
-          {" "}
-          <div
-            style={{
-              background: "#6A5EE5",
-              paddingLeft: "19px",
-              paddingTop: "12px",
-              paddingBottom: "12px",
-              width: "391px",
-              borderRadius: "5px",
-              color: "white",
-              textAlign: "center",
-              outline: "none",
-              textDecoration: "none",
-            }}
-            onClick={() => handleSubmit()}
-          >
-            Create Workspace
-          </div>
-        </>
-      )}
-    </div>
+      <div style={{ marginLeft: "11%" }}>
+        <h5 style={{ color: "#2F4F4F", padding: 7 }}>Workspace Name</h5>
+        <InputArea
+          placeholder="Eden"
+          header={"Full Name"}
+          setQuery={setQuery}
+          text={"workspaceName"}
+          value={query.workspaceName}
+          onHandleChange={onHandleChange}
+        />
+        <h5 style={{ color: "#2F4F4F", padding: 7 }}>
+          Workspace URL{" "}
+          <span style={{ color: "gray", fontWeight: "lighter" }}>
+            (optional)
+          </span>
+        </h5>
+        <InputArea
+          placeholder="Steve"
+          header={"Display Name"}
+          setQuery={setQuery}
+          text={"workspaceUrl"}
+          value={query.workspaceUrl}
+          onHandleChange={onHandleChange}
+          url={"url"}
+        />
+        {query.workspaceName ? (
+          <Link style={{ outline: "none", textDecoration: "none" }} to="/setup">
+            <WorkspaceDiv onClick={() => handleSubmit()}>
+              {Strings.CREATE_WORKSPACE}
+            </WorkspaceDiv>
+          </Link>
+        ) : (
+          <>
+            <WorkspaceDiv onClick={() => handleSubmit()}>
+              {Strings.CREATE_WORKSPACE}
+            </WorkspaceDiv>
+          </>
+        )}
+      </div>
+    </WorkspaceMain>
   );
 };
 
