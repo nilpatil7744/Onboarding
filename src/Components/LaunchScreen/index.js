@@ -28,8 +28,10 @@ const LaunchScreen = (props) => {
       />
       <br />
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <h1 style={{ marginLeft: "13%" }}>Congratulations, {userName}! </h1>
-        <span style={{}}>{Strings.COMPLETED_ONBOARD}</span>
+        <h1 style={{ marginLeft: "12.5%" }}>Congratulations, {userName}! </h1>
+        <span style={{ color: "gray", fontWeight: 448 }}>
+          {Strings.COMPLETED_ONBOARD}
+        </span>
       </div>
       <Link
         style={{ outline: "none", textDecoration: "none", marginLeft: "6%" }}

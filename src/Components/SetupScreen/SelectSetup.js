@@ -7,7 +7,7 @@ const SelectSetup = (props) => {
     <div
       style={{
         border: selected === id ? "2px solid #6A5EE5" : "1px solid #e8ecf3",
-        width: "31%",
+        width: "33%",
         paddingLeft: "20px",
         padding: "16px",
         borderRadius: "10px",

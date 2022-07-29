@@ -38,11 +38,12 @@ const WelcomeScreen = (props) => {
 
   return (
     <Main>
-      <div style={{ marginRight: "9%" }}>
+      <div style={{ marginRight: "8%" }}>
         <LogoUI />
       </div>
-
-      <ProgressBarUi phase={15} />
+      <div style={{ marginRight: "10%" }}>
+        <ProgressBarUi phase={15} />
+      </div>
 
       <br />
       <Header textHead={Strings.WELCOME} subText={Strings.YOU_CAN_CHANGE} />
