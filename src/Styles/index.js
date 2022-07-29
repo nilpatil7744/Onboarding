@@ -1,5 +1,37 @@
 import React from "react";
 import styled from "styled-components";
+import { Device } from "../Constant";
+
+export const AppMainDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 61px;
+  padding-bottom: 40px;
+  background: white;
+
+  @media ${Device.mobileS} {
+    display: flex;
+    justify-content: center;
+    margin-top: 61px;
+    padding-bottom: 40px;
+    background: #e8ecf3;
+  }
+  @media ${Device.mobileM} {
+    background-color: #e8ecf3;
+    display: flex;
+    justify-content: center;
+    margin-top: 61px;
+    padding-bottom: 40px;
+    background: #e8ecf3;
+  }
+  @media ${Device.mobileL} {
+    display: flex;
+    justify-content: center;
+    margin-top: 61px;
+    padding-bottom: 40px;
+    background: white;
+  }
+`;
 
 export const Main = styled.div`
   text-align: left;
@@ -7,7 +39,31 @@ export const Main = styled.div`
   width: 34rem;
   flex-direction: column;
   margin-top: 30px;
-  margin-left: 63px;
+  margin-left: 40px;
+
+  @media ${Device.mobileS} {
+    background-color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding-left: 150px;
+    padding-bottom: 40px;
+  }
+  @media ${Device.mobileM} {
+    background-color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding-left: 150px;
+  }
+  @media ${Device.mobileL} {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
 `;
 
 export const WorkspaceDiv = styled.div`
@@ -29,6 +85,30 @@ export const WorkspaceMain = styled.div`
   width: 34rem;
   flex-direction: column;
   margin-top: 30px;
+
+  @media ${Device.mobileS} {
+    background-color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding-left: 190px;
+    padding-bottom: 40px;
+  }
+  @media ${Device.mobileM} {
+    background-color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding-left: 190px;
+  }
+  @media ${Device.mobileL} {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
 `;
 
 export const SetupDiv = styled.div`
@@ -37,6 +117,30 @@ export const SetupDiv = styled.div`
   width: 34rem;
   flex-direction: column;
   margin-top: 30px;
+
+  @media ${Device.mobileS} {
+    background-color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding-left: 190px;
+    padding-bottom: 40px;
+  }
+  @media ${Device.mobileM} {
+    background-color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding-left: 190px;
+  }
+  @media ${Device.mobileL} {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
 `;
 
 export const SetupSubDiv = styled.div`

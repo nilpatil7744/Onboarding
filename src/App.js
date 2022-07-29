@@ -1,20 +1,12 @@
 import "./App.css";
 import { Routes } from "./Routes/Routes";
+import { AppMainDiv } from "./Styles";
 
 function App() {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        // border: "1px solid red",
-        marginTop: "60px",
-        paddingBottom: "40px",
-        background: "white",
-      }}
-    >
+    <AppMainDiv>
       <Routes />
-    </div>
+    </AppMainDiv>
   );
 }
 
