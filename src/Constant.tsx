@@ -13,6 +13,7 @@ export const Strings = {
   WITH_MY: "With my team",
   WRITE_BETTER_THINK: "Write better.Think more clearly.stay organized.",
   WIKIS_TEAMS: "Wikis,docs,tasks & projects,all in one place.",
+  LAUNCH:"Launch Eden"
 };
 
 export const size = {

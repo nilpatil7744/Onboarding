@@ -36,7 +36,7 @@ const LaunchScreen = (props) => {
       <Link
         style={{ outline: "none", textDecoration: "none", marginLeft: "6%" }}
       >
-        <LaunchDiv onClick={() => {}}>Launch Eden</LaunchDiv>
+        <LaunchDiv onClick={() => {}}>{Strings.LAUNCH}</LaunchDiv>
       </Link>
     </Main>
   );

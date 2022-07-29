@@ -65,13 +65,13 @@ const SetupScreen = (props) => {
             to="/launch"
           >
             <SetupWorkspaceDiv onClick={() => handleAdd()}>
-              Create Workspace
+              {Strings.CREATE_WORKSPACE}
             </SetupWorkspaceDiv>
           </Link>
         ) : (
           <>
             <SetupWorkspaceDiv onClick={() => handleAdd()}>
-              Create Workspace
+              {Strings.CREATE_WORKSPACE}
             </SetupWorkspaceDiv>
           </>
         )}
